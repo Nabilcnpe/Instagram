@@ -1,83 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="assets/css/style.css" />
-	<link rel="stylesheet" href="Bootstrap" />
-	<link rel="stylesheet" href="Bootstrap/bootstrap.min.css" />
 	
-    <title>Instagram</title>
-    <script src="JS/app.js"></script>
+	<!-- AngularJS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="JS/app.js"></script>
+	
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap-grid.css" />
+	<link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-glyphicons.css" rel="stylesheet">
+	
+    <!-- Custom Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+ 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	
+	<!-- Theme CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="JS/ang.js"></script>
+    
+    <title>Instagram</title>
+    
+    
   </head>
 
-  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+  <body ng-app="myApp" ng-controller="myCtrl" id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+  
 	<nav class="navbar navbar-default navbar-fixed-top">
 	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
 	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>                        
+	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="#myownpage">INSTAGRAM</a>
+	      <a class="navbar-brand page-scroll" href="#page-top">INSTAGRAM</a>
 	    </div>
-	    <div class="collapse navbar-collapse" id="myNavbar">
-	      <ul class="nav navbar-nav navbar-center">
-	        <li><a href="#github">Github</a></li>
-	        <li><a href="#band">Band</a></li>
-	      </ul>
-	    </div>
-	 </div>
+	  </div>
 	</nav>
 	
-	<p>Pour pouvoir réserver une salle veuillez vous authentifier : <br>
-	<a class="btn btn-primary">Se connecter avec google</a></p>
+	<div class="container text-center">
+		<p>Pour pouvoir réserver une salle veuillez vous authentifier : <br>
+<!-- 		<button g-login type="button">Se connecter avec google</button> -->
+		<!--Google +-->
+		<button type="button" class="btn btn-gplus"><i class="fa fa-google-plus left"></i>  Se connecter avec google</button></p>
+	</div>
 	
 	<div id="github" class="container text-center">
   		<h3>Github Link below :</h3>
   		<div class="row" style="text-align:center;">
-    	<div class="col-sm-4"></div>
-    	<div class="col-sm-4">
-        <h2><a href="https://github.com/">Github</a></h2>
-   	 	</div>
-  		</div>
+	    	<div class="col-sm-4"></div>
+	    	<div class="col-sm-4">
+	        	<h2><a href="https://github.com/Nabilcnpe/Instagram">Github</a></h2>
+	   	 	</div>
+	  	</div>
 	</div>
 	
-    <h1>Hello App Engine!</h1>
+			<!--     <h1>Hello App Engine!!</h1>
+			    <table>
+			      <tr>
+			        <td colspan="2" style="font-weight:bold;">Available Servlets:</td>        
+			      </tr>
+			      <tr>
+			        <td><a href='/hello'>The servlet</a></td>
+			      </tr>
+    		</table> -->
     
-  
-    <table>
-      <tr>
-        <td colspan="2" style="font-weight:bold;">Available Servlets:</td>        
-      </tr>
-      <tr>
-        <td><a href='/hello'>The servlet</a></td>
-      </tr>
-    </table>
-    
-    
-    
-	
-   </body>
+		<!--     Footer -->
+	<footer  class="footer fixed-bottom">
+		<!-- 		 <p>2018 INSTAGRAM. Tous droits réservés.</p> -->
+	</footer>
+   	
    
+    <!-- Bootstrap Core JavaScript -->
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-route/angular-route.min.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="/bower_components/angular-resource/angular-resource.min.js"></script>
    
-   
-   
-   
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  
+  </body>
 </html>
