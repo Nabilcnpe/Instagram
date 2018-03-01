@@ -1,8 +1,9 @@
 body {
       font: 400 15px/1.8 Lato, sans-serif;
-      color: #777;
+      color: #fafafa;
   }
-  h3, h4 {
+
+  h3, h4, p {
       margin: 10px 0 30px 0;
       letter-spacing: 10px;      
       font-size: 20px;
@@ -10,53 +11,6 @@ body {
   }
   .container {
       padding: 80px 120px;
-  }
-  .person {
-      border: 10px solid transparent;
-      margin-bottom: 25px;
-      width: 80%;
-      height: 80%;
-      opacity: 0.7;
-  }
-  .person:hover {
-      border-color: #f1f1f1;
-  }
-  .carousel-inner img {
-      -webkit-filter: grayscale(90%);
-      filter: grayscale(90%); /* make all photos black and white */ 
-      width: 100%; /* Set width to 100% */
-      margin: auto;
-  }
-  .carousel-caption h3 {
-      color: #fff !important;
-  }
-  @media (max-width: 600px) {
-    .carousel-caption {
-      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
-    }
-  }
-  .bg-1 {
-      background: #2d2d30;
-      color: #bdbdbd;
-  }
-  .bg-1 h3 {color: #fff;}
-  .bg-1 p {font-style: italic;}
-  .list-group-item:first-child {
-      border-top-right-radius: 0;
-      border-top-left-radius: 0;
-  }
-  .list-group-item:last-child {
-      border-bottom-right-radius: 0;
-      border-bottom-left-radius: 0;
-  }
-  .thumbnail {
-      padding: 0 0 15px 0;
-      border: none;
-      border-radius: 0;
-  }
-  .thumbnail p {
-      margin-top: 15px;
-      color: #555;
   }
   .btn {
       padding: 10px 20px;
@@ -139,37 +93,6 @@ body {
       resize: none;
   }
   
-  
-  .table{
- 		border:solid;
- 		margin:auto;
- 		padding:5px;
- 		max-height: 300px !important;
-    	overflow: scroll;
-  }
-  
-  .table-fixed {
-	  width: 100%;
-	}
-	.table-fixed tbody {
-	  max-height: 300px;
-	  overflow-y: auto;
-	  width: 100%;
-	}
-	.table-fixed thead,
-	.table-fixed tbody,
-	.table-fixed tr,
-	.table-fixed td,
-	.table-fixed th {
-	  display: block;
-	}
-	.table-fixed tbody td {
-	  
-	}
-	.table-fixed thead tr th {
-	  
-	
-	}
 	
 #successMessage,#errorMessage{
     position:absolute;
@@ -180,24 +103,6 @@ body {
 	text-align:center;
     display:none;
 }
-
-.myResa{
-    position:fixed;
-    z-index:1400;
-    top:9%;
-    right:2%;
-    margin:0px auto;
-	text-align:center;
-}
-
-  .tableResa{
- 		border:solid;
- 		margin:auto;
- 		padding:5px;
- 		max-width: 320px !important;
- 		min-width: 320px !important;
-    	overflow: scroll;
-  }
   
   .greenBackground{
   	background-color : green;

@@ -107,24 +107,6 @@ socialLogin.factory("socialLoginService", ['$window', '$rootScope',
 	}
 }]);
 
-socialLogin.directive("linkedIn", ['$rootScope', 'social', 'socialLoginService', '$window',
-	function($rootScope, social, socialLoginService, $window){
-	return {
-		restrict: 'EA',
-		scope: {},
-		link: function(scope, ele, attr){
-		    ele.on("click", function(){
-		  		IN.User.authorize(function(){
-					IN.API.Raw("/people/~:(id,first-name,last-name,email-address,picture-url)").result(function(res){
-						socialLoginService.setProvider("linkedIn");
-						var userDetails = {name: res.firstName + " " + res.lastName, email: res.emailAddress, uid: res.id, provider: "linkedIN", imageUrl: res.pictureUrl};
-						$rootScope.$broadcast('event:social-sign-in-success', userDetails);
-				    });
-				});
-			})
-		}
-	}
-}]);
 
 socialLogin.directive("gLogin", ['$rootScope', 'social', 'socialLoginService',
 	function($rootScope, social, socialLoginService){
@@ -164,55 +146,6 @@ socialLogin.directive("gLogin", ['$rootScope', 'social', 'socialLoginService',
 				}
 	        	
 	        });
-		}
-	}
-}]);
-
-socialLogin.directive("fbLogin", ['$rootScope', 'social', 'socialLoginService', '$q',
- function($rootScope, social, socialLoginService, $q){
-	return {
-		restrict: 'EA',
-		scope: {},
-		replace: true,
-		link: function(scope, ele, attr){
-			ele.on('click', function(){
-				var fetchUserDetails = function(){
-					var deferred = $q.defer();
-					FB.api('/me?fields=name,email,picture', function(res){
-						if(!res || res.error){
-							deferred.reject('Error occured while fetching user details.');
-						}else{
-							deferred.resolve({
-								name: res.name, 
-								email: res.email, 
-								uid: res.id, 
-								provider: "facebook", 
-								imageUrl: res.picture.data.url
-							});
-						}
-					});
-					return deferred.promise;
-				}
-				FB.getLoginStatus(function(response) {
-					if(response.status === "connected"){
-						fetchUserDetails().then(function(userDetails){
-							userDetails["token"] = response.authResponse.accessToken;
-							socialLoginService.setProvider("facebook");
-							$rootScope.$broadcast('event:social-sign-in-success', userDetails);
-						});
-					}else{
-						FB.login(function(response) {
-							if(response.status === "connected"){
-								fetchUserDetails().then(function(userDetails){
-									userDetails["token"] = response.authResponse.accessToken;
-									socialLoginService.setProvider("facebook");
-									$rootScope.$broadcast('event:social-sign-in-success', userDetails);
-								});
-							}
-						}, {scope: 'email', auth_type: 'rerequest'});
-					}
-				});
-			});
 		}
 	}
 }]);
