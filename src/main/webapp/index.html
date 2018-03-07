@@ -52,18 +52,12 @@
 	
 		<div class="container text-center">
 			<p style="color=black">Veuillez vous authentifier : <br>
-		<!-- 		<button g-login type="button">Se connecter avec google</button> -->
-			<!--Google +-->
 			<button g-login type="button" class="btn btn-gplus"><i class="fa fa-google-plus left"></i>  Se connecter avec google</button></p>
 			
 			<div ng-controller="SocialLoginController">
 			    <p>Provided by {{ userDetails.provider }}:</p>
 			    <p>{{ userDetails.name }}</p>
 			    <p>{{ userDetails.email }}</p>
-			<!--     <img src={{userDetails.imageUrl}} alt="profile picture" />  -->
-			    <br>
-		<!-- 		    <button ng-click="logout()">Logout</button> -->
-		<!-- 		    <button ng-click="runMe()">Get info</button> -->
 			    <button ng-click="logout()" type="button" class="btn btn-gplus">Logout</button></p>
 	  		</div>
 		</div>
